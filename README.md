@@ -26,10 +26,20 @@ approval. On a complex rule application, with many projects, rule flows, decisio
 specialist checks a different risk.
 
 ## Works with
-- IBM ODM 9.0 and later (tested on 9.6)
+| IBM ODM | Status | Verified on IBM's ODM for Developers images |
+|---|---|---|
+| 9.6 | supported | rule language, rule writing and testing on the engine, the full crew end to end |
+| 9.5, 9.0 | supported | rule language, rule writing, draft rulesets run on the engine |
+| 8.12, 8.11 | experimental | rule writing; 8.12 rule language and engine runs too (8.11 needs the rules' Java model deployed once) |
+
 - Decision Center, Rule Execution Server (or an embedded engine), or a local Rule Designer workspace folder
-- Runs on your own machine; works with the model provider you choose
 - IDE assistants through the Model Context Protocol
+
+## Your data
+RuleCrew, its settings, its knowledge and its audit trail stay on your machine; passwords and keys are encrypted
+for your Windows user. What leaves it: the requests to the language model **you** choose (your own key, your
+company's endpoint, or - for demo data only - free providers), and the calls to your own ODM servers. With real
+client rules, free providers are never used. Nothing is sent to us; no telemetry.
 
 ## Status
 A working prototype, shown on IBM's sample loan application. We would love your feedback - open an issue in this
